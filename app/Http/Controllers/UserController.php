@@ -38,7 +38,7 @@ class UserController extends Controller
             'email' => 'required'
         ]);
 
-        $user = Auth::user();
+        $user = $request->user;
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->save();
