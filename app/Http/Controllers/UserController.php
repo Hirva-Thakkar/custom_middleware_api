@@ -38,9 +38,9 @@ class UserController extends Controller
             'email' => 'required'
         ]);
 
-        $user = $request->user;
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
+         $user = $request->user;
+        $user->name = $request->name;
+        $user->email = $request->email;
         $user->save();
 
         // dd($user);
